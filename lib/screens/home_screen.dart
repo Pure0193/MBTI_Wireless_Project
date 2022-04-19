@@ -269,6 +269,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: const Text('Quiz App'),
                 backgroundColor: background,
                 shadowColor: Colors.transparent,
+                actions: <Widget>[ElevatedButton(
+                  onPressed: () {
+                    // Navigate to the second screen when tapped.
+                    Navigator.pushNamed(context, '/info');
+                  },
+                  child: const Text('MBTI Info'),
+                ),],
               ),
               body: Container(
                 width: double.infinity,
@@ -312,6 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
               floatingActionButtonLocation:
                   FloatingActionButtonLocation.centerFloat,
             );
+
           }
         } else {
           return Center(
